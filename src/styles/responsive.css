@@ -1,0 +1,118 @@
+@media screen and (min-width: 650px) {
+  .app-bar {
+    padding: 8px 32px;
+  }
+
+  top-bar {
+    grid-template-columns: 1fr auto;
+  }
+
+  .app-bar__menu {
+    display: none;
+  }
+
+  .app-bar__brand h1 {
+    font-size: 1.5em;
+  }
+
+  .app-bar__navigation {
+    position: static;
+    width: 100%;
+    background-color: transparent;
+  }
+
+  .app-bar__navigation ul li {
+    display: inline-block;
+  }
+
+  .app-bar__navigation ul li a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    width: 120px;
+    text-align: center;
+    margin: 0;
+  }
+
+  .hero-inner {
+    width: 100%;
+  }
+
+  restaurant-list {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .restaurant__poster,
+  .restaurant__name,
+  .restaurant__menus-title,
+  .restaurant__description,
+  restaurant-reviews {
+    grid-column: 1 / span 2;
+  }
+
+  .content {
+    scroll-margin: 75px;
+  }
+
+  .restaurant__name {
+    scroll-margin: 93px;
+  }
+
+  restaurant-detail,
+  .restaurant__info-1,
+  .restaurant__info-2,
+  .restaurant__food-menus,
+  .restaurant__drink-menus,
+  review-list {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .restaurant__info-1,
+  .restaurant__info-2,
+  .restaurant__food-menus,
+  .restaurant__drink-menus {
+    padding-left: 16px;
+  }
+
+  .reviewForm>input {
+    width: 60%;
+  }
+}
+
+@media screen and (min-width: 800px) {
+  .app-bar__brand h1 {
+    font-size: 2em;
+  }
+}
+
+@media screen and (min-width: 850px) {
+  restaurant-list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .hero-inner {
+    min-width: 1000px;
+  }
+
+  .content {
+    max-width: 1440px;
+  }
+
+  restaurant-list {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 32px;
+  }
+}
+
+@media screen and (min-width: 1600px) {
+  .content {
+    max-width: 1850px;
+  }
+
+  restaurant-list {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
