@@ -1,6 +1,6 @@
 const { merge } = require('webpack-merge');
 const WorkboxWebpackPlugin = require('workbox-webpack-plugin');
-const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer');
+// const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer');
 const ImageminWebpackPlugin = require('imagemin-webpack-plugin').default;
 const ImageminMozjpeg = require('imagemin-mozjpeg');
 const ImageminWebpWebpackPlugin = require('imagemin-webp-webpack-plugin');
@@ -101,7 +101,7 @@ module.exports = merge(common, {
       ],
       overrideExtension: true,
     }),
-    new BundleAnalyzerPlugin(),
     new MiniCssExtractPlugin(),
+    // new BundleAnalyzerPlugin(),
   ],
 });
