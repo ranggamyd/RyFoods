@@ -8,8 +8,10 @@ import FavoriteRestaurantIdb from '../../data/favorite-restaurant-idb';
 export default {
   render() {
     return `
-      <restaurant-detail></restaurant-detail>
-      <div id="favoriteButtonContainer"></div>
+      <div class="content" id="/content">
+        <restaurant-detail></restaurant-detail>
+        <div id="favoriteButtonContainer"></div>
+      </div>
     `;
   },
 
@@ -44,15 +46,5 @@ export default {
         },
       });
     }
-
-    const skipToContent = document.querySelector('.skip-to-content');
-    const content = document.querySelector('.restaurant__name');
-    skipToContent.addEventListener('click', (event) => {
-      event.preventDefault();
-      content.scrollIntoView({
-        behavior: 'smooth',
-        block: 'start',
-      });
-    });
   },
 };

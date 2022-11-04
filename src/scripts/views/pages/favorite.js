@@ -13,15 +13,5 @@ export default {
   async afterRender() {
     new FavoriteRestaurantShowPresenter({ view, favoriteRestaurants: FavoriteRestaurantIdb });
     new FavoriteRestaurantSearchPresenter({ view, favoriteRestaurants: FavoriteRestaurantIdb });
-
-    const skipToContent = document.querySelector('.skip-to-content');
-    const content = document.querySelector('.content');
-    skipToContent.addEventListener('click', (event) => {
-      event.preventDefault();
-      content.scrollIntoView({
-        behavior: 'smooth',
-        block: 'start',
-      });
-    });
   },
 };

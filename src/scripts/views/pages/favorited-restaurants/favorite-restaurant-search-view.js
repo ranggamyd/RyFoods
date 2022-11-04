@@ -4,9 +4,9 @@ import '../../components/restaurant-item';
 class FavoriteRestaurantSearchView {
   getTemplate() {
     return `
-      <div class="content">
-        <input id="query" type="text">
+      <div class="content" id="/content">
         <h2 class="content__heading">Your Favorited Restaurant</h2>
+        <input type="text" id="query" placeholder="Type your favorited restaurant ..">
         <restaurant-list></restaurant-list>
       </div>
    `;

@@ -1,5 +1,6 @@
 import Swal from 'sweetalert2';
 
+const createSkipContentTemplate = '<a href="#content" class="skip-to-content" tabindex="1">Skip to Content?</a>';
 const createLoaderTemplate = '<div class="loader">Loading...</div>';
 
 const createFavoriteRestaurantButtonTemplate = () => `
@@ -39,6 +40,7 @@ const createAlertTemplate = {
 };
 
 export {
+  createSkipContentTemplate,
   createLoaderTemplate,
   createFavoriteRestaurantButtonTemplate,
   createUnfavoriteRestaurantButtonTemplate,
