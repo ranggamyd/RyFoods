@@ -21,14 +21,16 @@ class App {
 
   async renderPage() {
     const url = UrlParser.parseActiveUrlWithCombiner();
-    const page = routes[url];
+    if (url !== '/content') {
+      const page = routes[url];
 
-    try {
-      this._content.innerHTML = await page.render();
-      await page.afterRender();
-      this._drawer.classList.remove('open');
-    } catch (error) {
-      console.log('404 Not found!');
+      try {
+        this._content.innerHTML = await page.render();
+        await page.afterRender();
+        this._drawer.classList.remove('open');
+      } catch (error) {
+        console.log('404 Not found!');
+      }
     }
   }
 }
